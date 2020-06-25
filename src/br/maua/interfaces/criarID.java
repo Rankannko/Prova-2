@@ -1,4 +1,2 @@
-package br.maua.interfaces;
+package br.maua.int
 
-public interface criarID {
-}
