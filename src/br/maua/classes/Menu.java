@@ -8,8 +8,12 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
         input="0";
         do{
-        System.out.println("1 para continuar");
+        System.out.println("Pizzaria Rato que Ri:\n"+
+                "1-Nova Venda\n" +
+                "2-Verificar Pedidos\n" +
+                "3-Alterar Pedidos\n"+
+                "0-Sair");
         input=scanner.nextLine();
-        }while (input.equals("1"));
+        }while (input.equals("1")||input.equals("2")||input.equals("3"));
     }
 }
