@@ -1,5 +1,5 @@
 package br.maua.classes;
-
+import br.maua.classes.Usuario;
 import java.util.Scanner;
 
 public class Menu {
@@ -7,6 +7,7 @@ public class Menu {
         String input;
         Scanner scanner = new Scanner(System.in);
         input="0";
+        Usuario usuario = new Usuario("José","Joselegal@hotmail.com","123456");
         do{
         System.out.println("Pizzaria Rato que Ri:\n"+
                 "1-Nova Venda\n" +
