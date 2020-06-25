@@ -1,6 +1,8 @@
 package br.maua.classes;
 import br.maua.classes.Usuario;
 import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class Menu {
     public static void Run(){
