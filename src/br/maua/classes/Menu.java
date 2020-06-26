@@ -1,6 +1,10 @@
 package br.maua.classes;
 import br.maua.classes.Usuario;
 
+import br.maua.enums.FormaDePagamento;
+import br.maua.enums.Status;
+import org.w3c.dom.ls.LSOutput;
+
 import java.lang.reflect.Array;
 import java.util.Random;
 import java.util.Scanner;
@@ -25,9 +29,19 @@ public class Menu{
             senha=scanner.nextLine();
             if (senha.equals(usuario.getSenha())){
                 ID = criarID();
-                meusPedidos.add(new Pedido(ID,))
+                meusPedidos.add(new Pedido(ID, FormaDePagamento.VALE_REFEICAO, Status.REALIZADO));
+                meusPedidos.forEach(pedido -> {
+                    System.out.println("O ID do pedido é: "
+                            + pedido.getID()+
+                            "sua forma de pagamento é "
+                            + pedido.getFormadepagamento()+
+                            "e seu status é "+
+                            pedido.getStatus());
+                });
+
             }
-        }
+            }
+
         }while (input.equals("1")||input.equals("2")||input.equals("3"));
     }
 
@@ -39,5 +53,4 @@ public class Menu{
         }
         return idGerado;
     }
-
 }

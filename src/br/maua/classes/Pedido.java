@@ -26,4 +26,5 @@ public class Pedido{
     private String ID;
     private FormaDePagamento formadepagamento;
     private Status status;
+
 }
