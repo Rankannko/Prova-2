@@ -2,6 +2,9 @@ package br.maua.enums;
 
 /**
  * Enumeracao dos possiveis Status, utilizado para gerar um Pedido
+ * @Autor João Pedro de Pauda Santoro Azevedo RA: 18.02277-4 e-mail: azevedomasterjp27@hotmail.com
+ * @since 26/06
+ * @version 1.0
  */
 public enum Status {
     REALIZADO("Realizado"),

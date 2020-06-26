@@ -2,6 +2,9 @@ package br.maua.enums;
 
 /**
  * Enum com as formas de Pagamento, utilizada na construção da classe Pedido
+ * @Autor João Pedro de Pauda Santoro Azevedo RA: 18.02277-4 e-mail: azevedomasterjp27@hotmail.com
+ * @since 26/06
+ * @version 1.0
  */
 public enum FormaDePagamento {
     DINHEIRO("Dinheiro"),
