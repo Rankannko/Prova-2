@@ -1,7 +1,8 @@
 package br.maua.enums;
 
-import java.text.Normalizer;
-
+/**
+ * Enum com as formas de Pagamento, utilizada na construção da classe Pedido
+ */
 public enum FormaDePagamento {
     DINHEIRO("Dinheiro"),
     DEBITO("Debito"),

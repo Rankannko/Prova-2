@@ -53,6 +53,9 @@ public class Pedido{
     private FormaDePagamento formadepagamento;
     private Status status;
 
+    /**
+     * @param status Setter da Classe Status
+     */
     public void setStatus(Status status) {
         this.status = status;
     }
