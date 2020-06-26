@@ -10,15 +10,17 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+/**
+ *
+ */
 public class Menu{
     public static void Run(){
         String input;
         String senha;
         String detalhespedido;
         String ID;
-        String IDmodificado;
+        String idmodificado;
         String formadepagamento;
-        final String[] novostatus = new String[1];
         Scanner scanner = new Scanner(System.in);
         ArrayList<Pedido> meusPedidos =new ArrayList<>();
         input="0";
@@ -59,10 +61,11 @@ public class Menu{
             senha=scanner.nextLine();
             if (senha.equals(usuario.getSenha())) {
                 System.out.println("Digite o ID do pedido a ser alterado:");
-                IDmodificado=scanner.nextLine();
+                idmodificado=scanner.nextLine();
+                System.out.println("ID modificado:"+idmodificado);
                 meusPedidos.forEach(pedido -> {
-                    if (IDmodificado.equals(pedido.getID())) {
-                        System.out.println("Pedido encontrado");
+                    if (pedido.getID().equals(idmodificado)) {
+
                     }
                 });
             }
