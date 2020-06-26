@@ -1,5 +1,8 @@
 package br.maua.enums;
 
+/**
+ * Enumeracao dos possiveis Status, utilizado para gerar um Pedido
+ */
 public enum Status {
     REALIZADO("Realizado"),
     PREPARACAO("Preparacao"),
