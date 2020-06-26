@@ -24,7 +24,6 @@ public class Menu{
         String senha;
         String detalhespedido;
         String ID;
-        String novoStatus;
         String formadepagamento;
         Scanner scanner = new Scanner(System.in);
         ArrayList<Pedido> meusPedidos =new ArrayList<>();
@@ -66,15 +65,15 @@ public class Menu{
         if (input.equals("3")){
             System.out.println("Digite a senha do usuario:");
             senha=scanner.nextLine();
-            scanner.nextLine();
             if (senha.equals(usuario.getSenha())) {
                 System.out.println("Digite o ID do pedido a ser alterado:");
                 String idmodificado = scanner.nextLine();
                 System.out.println("Id regitrado para a busca:" +idmodificado);
                 meusPedidos.forEach(pedido -> {
-                    if (idmodificado){
-                        System.out.println("Digite o Novo status entre Realizado, Preparado, Saiu Pra Entrega, Entregue, Devolvido:");
-                        novoStatus=scanner.nextLine();
+                    System.out.println(pedido.getID());
+                    if (idmodificado.equals(pedido.getID())){
+                        System.out.println("Digite o novo Status do Pedido, PREPARADO, SAIU_PARA_ENTREGA, ENTREGUE, DEVOLVIDO, em letras mauisculas e com _:");
+                        String novoStatus = scanner.nextLine();
                         pedido.setStatus(Status.valueOf(novoStatus));
                     }
                 });
