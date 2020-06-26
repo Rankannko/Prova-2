@@ -12,7 +12,13 @@ import java.util.ArrayList;
 
 public class Menu{
     public static void Run(){
-        String input,senha,tipopedido,ID,formadepagamento;
+        String input;
+        String senha;
+        String detalhespedido;
+        String ID;
+        String IDmodificado;
+        String formadepagamento;
+        final String[] novostatus = new String[1];
         Scanner scanner = new Scanner(System.in);
         ArrayList<Pedido> meusPedidos =new ArrayList<>();
         input="0";
@@ -29,19 +35,38 @@ public class Menu{
             senha=scanner.nextLine();
             if (senha.equals(usuario.getSenha())){
                 ID = criarID();
-                meusPedidos.add(new Pedido(ID, FormaDePagamento.VALE_REFEICAO, Status.REALIZADO));
+                System.out.println("Digite o Pedido:");
+                detalhespedido=scanner.nextLine();
+                System.out.println("Digite a forma de pagamento, entre Dinheiro, Debito, Credito, Vale Alimentacao, Vale refeicao, em maiusculas com um _:");
+                formadepagamento=scanner.nextLine();
+                meusPedidos.add(new Pedido(detalhespedido,ID, FormaDePagamento.valueOf(formadepagamento), Status.REALIZADO));
+            }
+            }
+        if (input.equals("2")){
+            meusPedidos.forEach(pedido -> {
+                System.out.println("O Pedido é:"
+                        +pedido.getDetalhes()+
+                        " o ID do pedido é: "
+                        + pedido.getID()+
+                        " sua forma de pagamento é "
+                        + pedido.getFormadepagamento()+
+                        " e seu status é "+
+                        pedido.getStatus());
+            });
+        }
+        if (input.equals("3")){
+            System.out.println("Digite a senha do usuario:");
+            senha=scanner.nextLine();
+            if (senha.equals(usuario.getSenha())) {
+                System.out.println("Digite o ID do pedido a ser alterado:");
+                IDmodificado=scanner.nextLine();
                 meusPedidos.forEach(pedido -> {
-                    System.out.println("O ID do pedido é: "
-                            + pedido.getID()+
-                            "sua forma de pagamento é "
-                            + pedido.getFormadepagamento()+
-                            "e seu status é "+
-                            pedido.getStatus());
+                    if (IDmodificado.equals(pedido.getID())) {
+                        System.out.println("Pedido encontrado");
+                    }
                 });
-
             }
-            }
-
+        }
         }while (input.equals("1")||input.equals("2")||input.equals("3"));
     }
 

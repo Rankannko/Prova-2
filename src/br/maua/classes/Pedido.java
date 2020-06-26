@@ -5,10 +5,14 @@ import br.maua.enums.Status;
 import java.util.Random;
 
 public class Pedido{
-    public Pedido(String ID, FormaDePagamento formadepagamento, Status status) {
+    public Pedido(String detalhes,String ID, FormaDePagamento formadepagamento, Status status) {
+        this.detalhes=detalhes;
         this.ID = ID;
         this.formadepagamento = formadepagamento;
         this.status = status;
+    }
+    public String getDetalhes(){
+        return detalhes;
     }
 
     public String getID() {
@@ -23,8 +27,12 @@ public class Pedido{
         return status;
     }
 
-    private String ID;
+    private String ID,detalhes;
     private FormaDePagamento formadepagamento;
     private Status status;
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 
 }
