@@ -12,7 +12,7 @@ import java.util.ArrayList;
 /**
  *Classe Menu, com varias funcionalidades. Chama o menu da aplicação e, a partir das opções, adiciona um novo pedido, exibe os pedidos e os modifica
  * Para tal, implementa tanto formatos de Array list quanto classes de Pedido e Usuario, alem de enums Forma de Pagamento e Status
- * @Autor João Pedro de Pauda Santoro Azevedo RA: 18.02277-4 e-mail: azevedomasterjp27@hotmail.com
+ * @Author João Pedro de Pauda Santoro Azevedo RA: 18.02277-4 e-mail: azevedomasterjp27@hotmail.com
  * @since 26/06
  * @version 1.0
  */
